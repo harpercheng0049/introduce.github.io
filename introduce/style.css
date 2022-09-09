@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+TC:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: #ecedef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------- container ------- */
+
+.container {
+  width: 90vw;
+  min-height: 90vh;
+  border: 1px solid #5c5c5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+/* ------- introduction ------- */
+
+.introduction {
+  max-width: 880px;
+  display: flex;
+  justify-content: center;
+}
+
+.que_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35px;
+  position: relative;
+}
+
+#number {
+  font-family: "Abril Fatface", cursive;
+  color: #5c5c5c;
+  font-size: 2rem;
+  position: absolute;
+  top: 35px;
+  left: 20px;
+}
+
+#number::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1.2px solid #5c5c5c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no_answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #5c5c5c;
+}
+
+/* ------- btn-container ------- */
+
+.btn-container {
+  display: flex;
+}
+
+.prev-btn,
+.next-btn {
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #5c5c5c;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: #d93c1e;
+}
+
+.uil-angle-left {
+  padding-left: 8px;
+}
+
+.uil-angle-right {
+  padding-left: 20px;
+}
+
+/* ------- pic ------- */
+
+.pic {
+  min-height: 90vh;
+  height: 600px;
+  background: url(./pic.jpg) center / cover no-repeat;
+}
+
+/* ------- RWD ------- */
+
+@media screen and (max-width: 660px) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .que_area {
+    margin-right: 35px;
+  }
+  .pic {
+    display: none;
+  }
+  #number {
+    display: none;
+  }
+}
